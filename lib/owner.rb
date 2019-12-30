@@ -63,16 +63,14 @@ class Owner
         pet.owner = nil 
         end
           pets.clear
-        end
-    # binding.pry
-   
+      end
   end
   
-  # def list_pets
-  #   self.dogs
-  #   self.cats
-  #   puts "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
-  # end
+  def list_pets
+    self.dogs
+    self.cats
+    puts "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
+  end
 
 end
 

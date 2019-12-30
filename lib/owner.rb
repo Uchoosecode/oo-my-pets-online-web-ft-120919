@@ -58,16 +58,16 @@ class Owner
     @pets[:dogs] = dogs
     @pets[:cats] = cats 
     
-      pets.each {|species, pets| pets.each{|pet| pet.mood = "nervous"}pets.clear}
+      pets.each {|species, pets| pets.each{|pet| pet.mood = "nervous"} pets.clear}
     # binding.pry
    
   end
   
-  def list_pets
-    self.dogs
-    self.cats
-    puts "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
-  end
+  # def list_pets
+  #   self.dogs
+  #   self.cats
+  #   puts "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
+  # end
 
 end
 

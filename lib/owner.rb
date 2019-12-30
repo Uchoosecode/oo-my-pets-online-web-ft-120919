@@ -55,17 +55,12 @@ class Owner
   end
    
   def sell_pets
-    
-    while @pets[:dogs] << Dog.new(name, owner) && 
-    @pets[:cats] << Cat.new(name, owner)
-    
-      @pets.each do |species, pets|
-		    pets.each do |pet|
-		 	    pet.mood = "nervous"
-		    end
-		    @pets.clear
-		  end
-		end
+   pets.each do |species, animals|
+		 animals.each do |animal|
+		 	animal.mood = "nervous"
+		 end
+		 animals.clear
+		end 
   end
   
   def list_pets

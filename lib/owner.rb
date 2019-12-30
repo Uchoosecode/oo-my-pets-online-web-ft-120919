@@ -12,7 +12,6 @@ class Owner
     @species = "human"
     @@all << self
     @pets = {:cats => [], :dogs => []}
-    @new_pets = [exit]
   end
   
   def say_species
@@ -40,14 +39,40 @@ class Owner
   end
   
   def buy_cat(name)
+     Cat.new(name, self)
+  end
   
-    # binding.pry 
-    
+  def buy_dog(name)
+    Dog.new(name, self)
+  end
+  
+  def walk_dogs
+    self.dogs.each {|dog| dog.mood = "happy"}
   end
     
-
+  def feed_cats 
+    self.cats.each {|cat| cat.mood = "happy"}
+  end
    
+  def sell_pets
     
+    while @pets[:dogs] << Dog.new(name, owner) && 
+    @pets[:cats] << Cat.new(name, owner)
+    
+      @pets.each do |species, pets|
+		    pets.each do |pet|
+		 	    pet.mood = "nervous"
+		    end
+		    @pets.clear
+		  end
+		end
+  end
+  
+  def list_pets
+    self.dogs
+    self.cats
+    puts "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
+  end
 
 end
 

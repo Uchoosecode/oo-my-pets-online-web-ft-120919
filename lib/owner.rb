@@ -59,9 +59,9 @@ class Owner
     @pets[:cats] = cats 
     
       @pets.map do |species, pets|
-        pets.each do |pet| pet.mood = "nervous"
+        pets.each do |pet| pet.mood = "nervous" && pet.owner = nil 
         end
-          pets.owner.clear
+          pets.clear
         end
     # binding.pry
    

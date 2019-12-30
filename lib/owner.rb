@@ -58,7 +58,7 @@ class Owner
     @pets[:dogs] = dogs
     @pets[:cats] = cats 
     
-      @pets
+      pets.each {|species, pet| pet.each{|pet| pet.mood = "nervous"}}
     binding.pry
    
   end

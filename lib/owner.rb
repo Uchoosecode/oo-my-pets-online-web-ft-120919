@@ -55,7 +55,10 @@ class Owner
   end
    
   def sell_pets
-    @pets
+    @pets[:dogs] = dogs
+    @pets[:cats] = cats 
+    
+      @pets
     binding.pry
    
   end
